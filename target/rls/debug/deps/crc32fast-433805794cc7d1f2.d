@@ -1,0 +1,10 @@
+/Users/louisjohnson/Desktop/Rust/aseprite-packer/target/rls/debug/deps/crc32fast-433805794cc7d1f2.rmeta: /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/lib.rs /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/baseline.rs /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/combine.rs /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/specialized/mod.rs /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/table.rs /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/specialized/pclmulqdq.rs
+
+/Users/louisjohnson/Desktop/Rust/aseprite-packer/target/rls/debug/deps/crc32fast-433805794cc7d1f2.d: /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/lib.rs /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/baseline.rs /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/combine.rs /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/specialized/mod.rs /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/table.rs /Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/specialized/pclmulqdq.rs
+
+/Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/lib.rs:
+/Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/baseline.rs:
+/Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/combine.rs:
+/Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/specialized/mod.rs:
+/Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/table.rs:
+/Users/louisjohnson/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.2.1/src/specialized/pclmulqdq.rs:
