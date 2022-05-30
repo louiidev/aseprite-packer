@@ -8,7 +8,7 @@ homepage = "https://github.com/louisgjohnson/aseprite-packer"
 repository = "https://github.com/louisgjohnson/aseprite-packer"
 readme = "README.md"
 keywords = ["gamedev", "2d", "aseprite", "packer", "spritesheet"]
-categories = ["development-tools::games"]
+categories = ["game-development", "rendering::data-formats"]
 
 [dependencies]
 asefile = "0.2.0"
