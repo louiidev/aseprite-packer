@@ -6,8 +6,6 @@ use std::{collections::HashMap, fs::File, path::Path};
 use std::{fs, io::Write, path::PathBuf};
 use texture_packer::{exporter::ImageExporter, TexturePacker, TexturePackerConfig};
 
-mod errors;
-
 #[derive(Serialize, Deserialize, Debug)]
 pub struct AseTextureData {
     pub width: u32,
