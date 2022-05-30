@@ -7,6 +7,8 @@ description = "Aseprite sprite packer"
 homepage = "https://github.com/louisgjohnson/aseprite-packer"
 repository = "https://github.com/louisgjohnson/aseprite-packer"
 readme = "README.md"
+keywords = ["gamedev", "graphics", "2d", "aseprite", "packer", "image", "spritesheet"]
+categories = ["development-tools::games"]
 
 [dependencies]
 asefile = "0.2.0"
