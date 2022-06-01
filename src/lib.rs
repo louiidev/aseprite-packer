@@ -22,6 +22,7 @@ pub struct AsepritePackerConfig<'a> {
     pub path: &'a Path,
     pub output_image_location: Option<&'a Path>,
     pub output_ron_location: Option<&'a Path>,
+    pub trim: bool,
 }
 
 impl<'a> Default for AsepritePackerConfig<'a> {
@@ -31,6 +32,7 @@ impl<'a> Default for AsepritePackerConfig<'a> {
             path: Path::new("."),
             output_image_location: None,
             output_ron_location: None,
+            trim: false,
         }
     }
 }
@@ -47,6 +49,14 @@ pub struct AsepritePacker {
 
 impl AsepritePacker {
     pub fn new(config: AsepritePackerConfig) -> Self {
+        let AsepritePackerConfig {
+            aseprite_file_names,
+            path,
+            output_image_location,
+            output_ron_location,
+            trim,
+        } = config;
+
         let texture_packer_config = TexturePackerConfig {
             max_width: std::u32::MAX,
             max_height: std::u32::MAX,
@@ -54,6 +64,7 @@ impl AsepritePacker {
             texture_outlines: false,
             border_padding: 0,
             texture_padding: 0,
+            trim,
             ..Default::default()
         };
 
@@ -61,13 +72,6 @@ impl AsepritePacker {
             TexturePacker::new_skyline(texture_packer_config);
 
         let mut packed_texture_data: HashMap<String, AseTextureData> = HashMap::default();
-
-        let AsepritePackerConfig {
-            aseprite_file_names,
-            path,
-            output_image_location,
-            output_ron_location,
-        } = config;
 
         let ase_files: Vec<AseFile> = if !aseprite_file_names.is_empty() {
             aseprite_file_names
