@@ -1,6 +1,6 @@
 [package]
 name = "aseprite-packer"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2018"
 license = "MIT"
 description = "Aseprite sprite packer"
@@ -14,5 +14,5 @@ categories = ["game-development", "rendering::data-formats"]
 asefile = "0.2.0"
 image = "0.23.14"
 texture_packer = "0.23.0"
-serde = "1.0.126"
-ron = "0.6.4"
+serde = "1.0.137"
+ron = "0.7.0"

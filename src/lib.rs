@@ -105,12 +105,20 @@ impl AsepritePacker {
             // let path = env::current_dir().unwrap();
             let ase_file = load_ase(file.path.as_path());
             match ase_file {
-                Err(e) => panic!(e),
+                Err(e) => panic!("{}", e),
                 Ok(ase) => {
-                    for frame in 0..ase.num_frames() {
+                    for frame_num in 0..ase.num_frames() {
                         ase.width();
-                        let key: String = format!("{}_{}", file.name.to_string(), frame);
-                        packer.pack_own(key.clone(), ase.frame(frame).image());
+                        let key: String = if ase.num_frames() > 1 {
+                            format!("{}_{}", file.name.to_string(), frame_num)
+                        } else {
+                            file.name.to_string()
+                        };
+                        let _result = packer.pack_own(key.clone(), ase.frame(frame_num).image());
+                        match _result {
+                            Ok(_) => {}
+                            Err(e) => panic!("Error packing file: {:?}", e),
+                        }
                         let frame_data = packer.get_frame(&key).expect("Frame not found");
                         let source = frame_data.frame;
                         packed_texture_data.insert(
@@ -121,7 +129,7 @@ impl AsepritePacker {
                                 x: source.x,
                                 y: source.y,
                                 basename: file.name.to_string(),
-                                frame,
+                                frame: frame_num,
                             },
                         );
                     }
@@ -139,7 +147,11 @@ impl AsepritePacker {
         if let Some(output) = output_ron_location {
             let mut file = std::fs::File::create(output).unwrap();
             let str = to_string_pretty(&packed_texture_data, PrettyConfig::default()).unwrap();
-            file.write_all(str.as_bytes());
+            let _result = file.write_all(str.as_bytes());
+            match _result {
+                Ok(_) => {}
+                Err(e) => panic!("{}", e),
+            }
         }
 
         let ase_packer = AsepritePacker {
